@@ -23,7 +23,6 @@ customElements.define("product-item", class extends HTMLElement {
       return `
       width:calc( 16% - 5px );
       margin: 5px;
-      // height:45vh;
       aspect-ratio: 6 / 5;
       position: relative;
       `
@@ -140,7 +139,7 @@ customElements.define("product-item", class extends HTMLElement {
       background: black;
       position: absolute;
       right: 0;
-      bottom: 12.5vh;
+      bottom: 8svh;
       font-size:5px;
       color:white;
     }
