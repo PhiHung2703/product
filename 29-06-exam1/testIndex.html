@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin:0;
+            box-sizing: border-box;
+        }
+        .container{
+            width:100%;
+            height:100vh;
+            background-color: black;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        .product-items{
+            width:100%;
+            max-width: 75vw;
+            height: 45vh;
+            background-color: pink;
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            align-self: center;
+            
+            
+        }
+        .product-item{
+            width:calc( 16% - 5px );
+            margin: 5px;
+            aspect-ratio: 6 / 5;
+            background-color:white;
+        }
+        .image-item{
+            width:100%;
+            aspect-ratio: 2 / 1;
+            background-color: grey;
+            position: relative;
+        }
+        .content_item{
+            display: flex;
+            flex-direction: row;
+            background-color: aqua;
+            width:100%;
+            height:7.7vh;
+        }
+        .logo-channel{
+            width:20px;
+            height: 20px;
+            flex-shrink: 0;
+            background-color: white;
+        }
+        .content{
+            margin-left: 5px;
+            flex:1;
+            /* background-color: red; */
+        }
+        .content-top{
+            width:100%;
+            height: 3vh;
+            background-color: white;
+        }
+        .content-bottom{
+            width:100%;
+            height: 3vh;
+            /* background-color: white; */
+            margin-top: 5px;
+        }
+        .chanel{
+            display:flex;
+            flex-direction:row;
+            height:1.5vh;
+            width:100%;
+        }
+        .name-channel{
+            width:80%;
+            height:1.5vh;
+            background-color: blue;
+        }
+        .icon-tick{
+            width:10%;
+            height:1.5vh;
+            background-color: blue;
+            margin-left: 10px;
+        }
+        .view{
+            display:flex;
+            flex-direction:row;
+            height:1.5vh;
+            width:100%;
+            margin-top: 1px;
+        }
+        .quatity-view{
+            width:40%;
+            height:1.5vh;
+            background-color:green;
+        }
+        .broadcast-time{
+            width:40%;
+            height:1.5vh;
+            background-color:green;
+            margin-left: 10px;
+        }
+        .timeline{
+            width:10%;
+            height:10px;background: red;
+            position: absolute;
+            right: 0;
+            bottom: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="product-items">
+        <div class="product-item">
+            <div class="image-item">
+                <a id="image" href="">
+                    <span class="timeline"></span>
+                    <img class="image"/>
+                </a>
+            </div>
+            <div class="content_item">
+                <a class="logo-channel" href="">
+                    <img class="image-logo"/>
+                </a>
+                <div class="content">
+                    <h3 class="content-top">
+                        <a class="title" href=""></a>
+                    </h3>
+                    <div class="content-bottom">
+                        <div class="chanel">
+                            <div class="name-channel"></div>
+                            <span class="icon-tick"></span>
+                        </div>
+                        <div class="view">
+                            <div class="quatity-view"></div>
+                            <div class="broadcast-time"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="product-item">
+            <div class="image-item">
+                <a id="image" href="">
+                    <span class="timeline"></span>
+                    <img class="image"/>
+                </a>
+            </div>
+            <div class="content_item">
+                <a class="logo-channel" href="">
+                    <img class="image-logo"/>
+                </a>
+                <div class="content">
+                    <h3 class="content-top">
+                        <a class="title" href=""></a>
+                    </h3>
+                    <div class="content-bottom">
+                        <div class="chanel">
+                            <div class="name-channel"></div>
+                            <div class="icon-tick"></div>
+                        </div>
+                        <div class="view">
+                            <div class="quatity-view"></div>
+                            <div class="broadcast-time"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="product-item">
+            <div class="image-item">
+                <a id="image" href="">
+                    <span class="timeline"></span>
+                    <img class="image"/>
+                </a>
+            </div>
+            <div class="content_item">
+                <a class="logo-channel" href="">
+                    <img class="image-logo"/>
+                </a>
+                <div class="content">
+                    <h3 class="content-top">
+                        <a class="title" href=""></a>
+                    </h3>
+                    <div class="content-bottom">
+                        <div class="chanel">
+                            <div class="name-channel"></div>
+                            <div class="icon-tick"></div>
+                        </div>
+                        <div class="view">
+                            <div class="quatity-view"></div>
+                            <div class="broadcast-time"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="product-item">
+            <div class="image-item">
+                <a id="image" href="">
+                    <span class="timeline"></span>
+                    <img class="image"/>
+                </a>
+            </div>
+            <div class="content_item">
+                <a class="logo-channel" href="">
+                    <img class="image-logo"/>
+                </a>
+                <div class="content">
+                    <h3 class="content-top">
+                        <a class="title" href=""></a>
+                    </h3>
+                    <div class="content-bottom">
+                        <div class="chanel">
+                            <div class="name-channel"></div>
+                            <div class="icon-tick"></div>
+                        </div>
+                        <div class="view">
+                            <div class="quatity-view"></div>
+                            <div class="broadcast-time"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="product-item">
+            <div class="image-item">
+                <a id="image" href="">
+                    <span class="timeline"></span>
+                    <img class="image"/>
+                </a>
+            </div>
+            <div class="content_item">
+                <a class="logo-channel" href="">
+                    <img class="image-logo"/>
+                </a>
+                <div class="content">
+                    <h3 class="content-top">
+                        <a class="title" href=""></a>
+                    </h3>
+                    <div class="content-bottom">
+                        <div class="chanel">
+                            <div class="name-channel"></div>
+                            <div class="icon-tick"></div>
+                        </div>
+                        <div class="view">
+                            <div class="quatity-view"></div>
+                            <div class="broadcast-time"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="product-item">
+            <div class="image-item">
+                <a id="image" href="">
+                    <span class="timeline"></span>
+                    <img class="image"/>
+                </a>
+            </div>
+            <div class="content_item">
+                <a class="logo-channel" href="">
+                    <img class="image-logo"/>
+                </a>
+                <div class="content">
+                    <h3 class="content-top">
+                        <a class="title" href=""></a>
+                    </h3>
+                    <div class="content-bottom">
+                        <div class="chanel">
+                            <div class="name-channel"></div>
+                            <div class="icon-tick"></div>
+                        </div>
+                        <div class="view">
+                            <div class="quatity-view"></div>
+                            <div class="broadcast-time"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="product-item">
+            <div class="image-item">
+                <a id="image" href="">
+                    <span class="timeline"></span>
+                    <img class="image"/>
+                </a>
+            </div>
+            <div class="content_item">
+                <a class="logo-channel" href="">
+                    <img class="image-logo"/>
+                </a>
+                <div class="content">
+                    <h3 class="content-top">
+                        <a class="title" href=""></a>
+                    </h3>
+                    <div class="content-bottom">
+                        <div class="chanel">
+                            <div class="name-channel"></div>
+                            <div class="icon-tick"></div>
+                        </div>
+                        <div class="view">
+                            <div class="quatity-view"></div>
+                            <div class="broadcast-time"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="product-item">
+            <div class="image-item">
+                <a id="image" href="">
+                    <span class="timeline"></span>
+                    <img class="image"/>
+                </a>
+            </div>
+            <div class="content_item">
+                <a class="logo-channel" href="">
+                    <img class="image-logo"/>
+                </a>
+                <div class="content">
+                    <h3 class="content-top">
+                        <a class="title" href=""></a>
+                    </h3>
+                    <div class="content-bottom">
+                        <div class="chanel">
+                            <div class="name-channel"></div>
+                            <div class="icon-tick"></div>
+                        </div>
+                        <div class="view">
+                            <div class="quatity-view"></div>
+                            <div class="broadcast-time"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="product-item">
+            <div class="image-item">
+                <a id="image" href="">
+                    <span class="timeline"></span>
+                    <img class="image"/>
+                </a>
+            </div>
+            <div class="content_item">
+                <a class="logo-channel" href="">
+                    <img class="image-logo"/>
+                </a>
+                <div class="content">
+                    <h3 class="content-top">
+                        <a class="title" href=""></a>
+                    </h3>
+                    <div class="content-bottom">
+                        <div class="chanel">
+                            <div class="name-channel"></div>
+                            <div class="icon-tick"></div>
+                        </div>
+                        <div class="view">
+                            <div class="quatity-view"></div>
+                            <div class="broadcast-time"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="product-item">
+            <div class="image-item">
+                <a id="image" href="">
+                    <span class="timeline"></span>
+                    <img class="image"/>
+                </a>
+            </div>
+            <div class="content_item">
+                <a class="logo-channel" href="">
+                    <img class="image-logo"/>
+                </a>
+                <div class="content">
+                    <h3 class="content-top">
+                        <a class="title" href=""></a>
+                    </h3>
+                    <div class="content-bottom">
+                        <div class="chanel">
+                            <div class="name-channel"></div>
+                            <div class="icon-tick"></div>
+                        </div>
+                        <div class="view">
+                            <div class="quatity-view"></div>
+                            <div class="broadcast-time"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="product-item">
+            <div class="image-item">
+                <a id="image" href="">
+                    <span class="timeline"></span>
+                    <img class="image"/>
+                </a>
+            </div>
+            <div class="content_item">
+                <a class="logo-channel" href="">
+                    <img class="image-logo"/>
+                </a>
+                <div class="content">
+                    <h3 class="content-top">
+                        <a class="title" href=""></a>
+                    </h3>
+                    <div class="content-bottom">
+                        <div class="chanel">
+                            <div class="name-channel"></div>
+                            <div class="icon-tick"></div>
+                        </div>
+                        <div class="view">
+                            <div class="quatity-view"></div>
+                            <div class="broadcast-time"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="product-item">
+            <div class="image-item">
+                <a id="image" href="">
+                    <span class="timeline"></span>
+                    <img class="image"/>
+                </a>
+            </div>
+            <div class="content_item">
+                <a class="logo-channel" href="">
+                    <img class="image-logo"/>
+                </a>
+                <div class="content">
+                    <h3 class="content-top">
+                        <a class="title" href=""></a>
+                    </h3>
+                    <div class="content-bottom">
+                        <div class="chanel">
+                            <div class="name-channel"></div>
+                            <div class="icon-tick"></div>
+                        </div>
+                        <div class="view">
+                            <div class="quatity-view"></div>
+                            <div class="broadcast-time"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </div>
+</body>
+</html>

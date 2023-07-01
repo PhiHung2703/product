@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Parcel Sandbox</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="main-container.js"></script>
+    <script src="product-item.js"></script>
+    <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+    <style>
+        *{
+        box-sizing: border-box;
+        }
+      body {
+        display: flex;
+        flex-direction: column;
+        padding: 0;
+        margin: 0;
+        
+      }
+    </style>
+  </head>
+
+  <body>
+    <main-container>
+    </main-container>
+    <script>
+        const list = [
+        {
+          image_item:'https://i.ytimg.com/vi/LyKkyL1hPPs/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAS4lenPlKh2VY4CtEXai-IRHqpFA',
+          logo_channel:'https://yt3.ggpht.com/ytc/AGIKgqMbFZv-ICfwYz6HaR-zexB1_QFyceprQ8NnIJ7igQ=s68-c-k-c0x00ffffff-no-rj',
+          title: 'ĐẠI DƯƠNG SÂU | TV 8K ULTRA HD / Phim tài liệu đầy đủ',
+          name_channel:'8K VIDEOS ULTRA HD',
+          icon_tick:'data:image/png;base64,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',
+          quatity_view:'607 N lượt xem',
+          broadcast_time:'1 tháng trước',
+          timeline:'1:12:34',
+    },
+    {
+          image_item:'https://i.ytimg.com/vi/wwBEMSMP14c/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBDHdgmON_FyffPmP-jdMJsz0i27w',
+          logo_channel:'https://yt3.ggpht.com/j15x1UeK9tCo5QDY7mxxiGLAgUQFcFMUPtX-poVsBscNEJO10xfoZoiyqvP0yFj2UTye5RIGwzU=s68-c-k-c0x00ffffff-no-rj',
+          title: 'Săn Mồi Trong Hoang Dã P2 ( Bắc Cực ) | Khám Phá Thế Giới Động Vật Hoang Dã',
+          name_channel:'Nhật Ký Hoang Dã',
+          icon_tick:'',
+          quatity_view:'607 N lượt xem',
+          broadcast_time:'1 tháng trước',
+          timeline:'1:12:34',
+    },
+    {
+          image_item:'https://i.ytimg.com/vi/eVNtGdEs2l4/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBClxsC5iwGAGEcbB8fPvVj0BZcww',
+          logo_channel:'https://yt3.ggpht.com/ob_zZnd-pkMzuJeFeAtJ983giND4YL7NvJFLWoVpAjcb4p1NaQIpM0ppXL8ydgZXxK2IjgRKHg=s68-c-k-c0x00ffffff-no-rj',
+          title: 'Thợ Săn Và Đầu Bếp Thử Thách Sinh Tồn Nơi Hoang Dã | Tập 2 - Tôm Cua Cá Chén Ngập Mồm',
+          name_channel:'HDT Channel',
+          icon_tick:'',
+          quatity_view:'607 N lượt xem',
+          broadcast_time:'1 tháng trước',
+          // timeline:'1:45:45',
+          timeline:'1:12:34',
+    },
+    {
+          image_item:'https://i.ytimg.com/vi/LyKkyL1hPPs/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAS4lenPlKh2VY4CtEXai-IRHqpFA',
+          logo_channel:'https://yt3.ggpht.com/ytc/AGIKgqMbFZv-ICfwYz6HaR-zexB1_QFyceprQ8NnIJ7igQ=s68-c-k-c0x00ffffff-no-rj',
+          title: 'ĐẠI DƯƠNG SÂU | TV 8K ULTRA HD / Phim tài liệu đầy đủ',
+          name_channel:'8K VIDEOS ULTRA HD',
+          icon_tick:'',
+          quatity_view:'607 N lượt xem',
+          broadcast_time:'1 tháng trước',
+          // timeline:'58:28',
+          timeline:'1:12:34',
+    },
+    {
+          image_item:'https://i.ytimg.com/vi/wwBEMSMP14c/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBDHdgmON_FyffPmP-jdMJsz0i27w',
+          logo_channel:'https://yt3.ggpht.com/j15x1UeK9tCo5QDY7mxxiGLAgUQFcFMUPtX-poVsBscNEJO10xfoZoiyqvP0yFj2UTye5RIGwzU=s68-c-k-c0x00ffffff-no-rj',
+          title: 'Săn Mồi Trong Hoang Dã P2 ( Bắc Cực ) | Khám Phá Thế Giới Động Vật Hoang Dã',
+          name_channel:'Nhật Ký Hoang Dã',
+          icon_tick:'',
+          quatity_view:'607 N lượt xem',
+          broadcast_time:'1 tháng trước',
+          // timeline:'1:12:34',
+          timeline:'1:12:34',
+    },
+    {
+          image_item:'https://i.ytimg.com/vi/eVNtGdEs2l4/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBClxsC5iwGAGEcbB8fPvVj0BZcww',
+          logo_channel:'https://yt3.ggpht.com/ob_zZnd-pkMzuJeFeAtJ983giND4YL7NvJFLWoVpAjcb4p1NaQIpM0ppXL8ydgZXxK2IjgRKHg=s68-c-k-c0x00ffffff-no-rj',
+          title: 'Thợ Săn Và Đầu Bếp Thử Thách Sinh Tồn Nơi Hoang Dã | Tập 2 - Tôm Cua Cá Chén Ngập Mồm',
+          name_channel:'HDT Channel',
+          icon_tick:'',
+          quatity_view:'607 N lượt xem',
+          broadcast_time:'1 tháng trước',
+          // timeline:'1:45:45',
+          timeline:'1:12:34',
+    },
+    {
+          image_item:'https://i.ytimg.com/vi/LyKkyL1hPPs/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAS4lenPlKh2VY4CtEXai-IRHqpFA',
+          logo_channel:'https://yt3.ggpht.com/ytc/AGIKgqMbFZv-ICfwYz6HaR-zexB1_QFyceprQ8NnIJ7igQ=s68-c-k-c0x00ffffff-no-rj',
+          title: 'ĐẠI DƯƠNG SÂU | TV 8K ULTRA HD / Phim tài liệu đầy đủ',
+          name_channel:'8K VIDEOS ULTRA HD',
+          icon_tick:'',
+          quatity_view:'607 N lượt xem',
+          broadcast_time:'1 tháng trước',
+          // timeline:'58:28',
+          timeline:'1:12:34',
+    },
+    {
+          image_item:'https://i.ytimg.com/vi/wwBEMSMP14c/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBDHdgmON_FyffPmP-jdMJsz0i27w',
+          logo_channel:'https://yt3.ggpht.com/j15x1UeK9tCo5QDY7mxxiGLAgUQFcFMUPtX-poVsBscNEJO10xfoZoiyqvP0yFj2UTye5RIGwzU=s68-c-k-c0x00ffffff-no-rj',
+          title: 'Săn Mồi Trong Hoang Dã P2 ( Bắc Cực ) | Khám Phá Thế Giới Động Vật Hoang Dã',
+          name_channel:'Nhật Ký Hoang Dã',
+          icon_tick:'',
+          quatity_view:'607 N lượt xem',
+          broadcast_time:'1 tháng trước',
+          // timeline:'1:12:34',
+          timeline:'1:12:34',
+    },
+    {
+          image_item:'https://i.ytimg.com/vi/eVNtGdEs2l4/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBClxsC5iwGAGEcbB8fPvVj0BZcww',
+          logo_channel:'https://yt3.ggpht.com/ob_zZnd-pkMzuJeFeAtJ983giND4YL7NvJFLWoVpAjcb4p1NaQIpM0ppXL8ydgZXxK2IjgRKHg=s68-c-k-c0x00ffffff-no-rj',
+          title: 'Thợ Săn Và Đầu Bếp Thử Thách Sinh Tồn Nơi Hoang Dã | Tập 2 - Tôm Cua Cá Chén Ngập Mồm',
+          name_channel:'HDT Channel',
+          icon_tick:'',
+          quatity_view:'607 N lượt xem',
+          broadcast_time:'1 tháng trước',
+          // timeline:'1:45:45',
+          timeline:'1:12:34',
+    },
+    {
+          image_item:'https://i.ytimg.com/vi/LyKkyL1hPPs/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAS4lenPlKh2VY4CtEXai-IRHqpFA',
+          logo_channel:'https://yt3.ggpht.com/ytc/AGIKgqMbFZv-ICfwYz6HaR-zexB1_QFyceprQ8NnIJ7igQ=s68-c-k-c0x00ffffff-no-rj',
+          title: 'ĐẠI DƯƠNG SÂU | TV 8K ULTRA HD / Phim tài liệu đầy đủ',
+          name_channel:'8K VIDEOS ULTRA HD',
+          icon_tick:'',
+          quatity_view:'607 N lượt xem',
+          broadcast_time:'1 tháng trước',
+          // timeline:'58:28',
+          timeline:'1:12:34',
+    },
+    {
+          image_item:'https://i.ytimg.com/vi/wwBEMSMP14c/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBDHdgmON_FyffPmP-jdMJsz0i27w',
+          logo_channel:'https://yt3.ggpht.com/j15x1UeK9tCo5QDY7mxxiGLAgUQFcFMUPtX-poVsBscNEJO10xfoZoiyqvP0yFj2UTye5RIGwzU=s68-c-k-c0x00ffffff-no-rj',
+          title: 'Săn Mồi Trong Hoang Dã P2 ( Bắc Cực ) | Khám Phá Thế Giới Động Vật Hoang Dã',
+          name_channel:'Nhật Ký Hoang Dã',
+          icon_tick:'',
+          quatity_view:'607 N lượt xem',
+          broadcast_time:'1 tháng trước',
+          // timeline:'1:12:34',
+          timeline:'1:12:34',
+    },
+    {
+          image_item:'https://i.ytimg.com/vi/eVNtGdEs2l4/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBClxsC5iwGAGEcbB8fPvVj0BZcww',
+          logo_channel:'https://yt3.ggpht.com/ob_zZnd-pkMzuJeFeAtJ983giND4YL7NvJFLWoVpAjcb4p1NaQIpM0ppXL8ydgZXxK2IjgRKHg=s68-c-k-c0x00ffffff-no-rj',
+          title: 'Thợ Săn Và Đầu Bếp Thử Thách Sinh Tồn Nơi Hoang Dã | Tập 2 - Tôm Cua Cá Chén Ngập Mồm',
+          name_channel:'HDT Channel',
+          icon_tick:'',
+          quatity_view:'607 N lượt xem',
+          broadcast_time:'1 tháng trước',
+          // timeline:'1:45:45',
+          timeline:'1:12:34',
+    },
+    
+    ];
+    const listHTML = list.map((item)=>{
+        return `
+        <product-item
+        image_item="${item.image_item}"
+        name_item="${item.name_item}"
+        image_item="${item.image_item}"
+        logo_channel="${item.logo_channel}"
+        title="${item.title}"
+        name_channel="${item.name_channel}"
+        icon_tick="${item.icon_tick}"
+        quatity_view="${item.quatity_view}"
+        broadcast_time="${item.broadcast_time}"
+        timeline="${item.timeline}"
+        >
+        </product-item>
+        `
+    });
+    const joined = listHTML.join('\n');
+const mainContainer = document.querySelector('main-container');
+if (mainContainer){
+    mainContainer.innerHTML = joined;
+}
+
+    </script>
+  </body>
+</html>
