@@ -37,7 +37,7 @@ customElements.define("main-container", class extends HTMLElement {
             box-sizing: border-box;
             width:100%;
             max-width: 75vw;
-            height: 80vh;
+            height: 45vh;
             background-color:black;
             display: flex;
             flex-direction: column;
