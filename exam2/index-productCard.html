@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Parcel Sandbox</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style></style>
+    <script src="container-card.js"></script>
+    <script src="product-card.js"></script>
+
+    <style>
+      body {
+        display: flex;
+        flex-direction: column;
+        padding: 0;
+        margin: 0;
+      }
+    </style>
+  </head>
+
+  <body>
+    <container-card>
+
+    </container-card>
+    <script>
+        const list = [
+            {
+                content:'Stack Overflow for Teams has been a resource for our entire company. Not only for developers to solve problems, it’s also enabled our sales field to answer technical questions that help them close deals.',
+                service:'Director of Product Management',
+                department:' Microsoft',
+            },
+            {
+                content:'Engineers should help solve the hardest questions, the unknowns, where being familiar with how the product was built is essential. But we don’t want to keep answering solved problems over and over again. That’s where Stack Overflow for Teams really helps.',
+                service:'Director of Engineering',
+                department:'Elastic Cloud',
+            },
+            {
+                content:'As we started to use [Stack Overflow for Teams] and saw how nice it was to have a repository of information, we started to see it spread to other teams. Our customer support team started using it, our people success team started using it, next thing we knew, we had [Slack] integrations all over the place.',
+                service:'Engineering',
+                department:'Expensify',
+            },
+            {
+                content:'What we love about Stack Overflow for Teams is that it’s a very dynamic tool…there’s just so many ways to use this as a liaison between different teams and different knowledge bases.',
+                service:'Software Engineer',
+                department:'Box',
+            },
+            
+        ];
+        const listHTML = list.map((item)=>{
+            return `
+            <product-card
+            content="${item.content}"
+            service="${item.service}"
+            department="${item.department}"
+
+            ></product-card>
+            `
+        });
+        const joined = listHTML.join('\n');
+        const containerCard = document.querySelector('container-card');
+if (containerCard){
+    containerCard.innerHTML = joined;
+}
+    </script>
+  </body>
+</html>
