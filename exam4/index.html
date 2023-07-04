@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Parcel Sandbox</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style></style>
+    <script src="product-item.js"></script>
+    <script src="main-container.js"></script>
+
+
+    <style>
+      body {
+        display: flex;
+        flex-direction: column;
+        padding: 0;
+        margin: 0;
+      }
+    </style>
+  </head>
+
+  <body>
+    <main-container></main-container>
+    <script>
+        const list =[
+            {
+                image_background:'https://res.cloudinary.com/daily-now/image/upload/f_auto,q_auto/v1/posts/44984394177adea062b5d42c8b5726b7?_a=AQADKdt',
+                image_index1:'https://res.cloudinary.com/daily-now/image/upload/t_logo,f_auto/v1/logos/be8d9d38650943c8a1718ba79f23e9ac',
+                name:'Five Alternatives to GitHub Copilot',
+                content:'GitHub Copilot is an AI-powered pair programming tool developed by Microsoft. It provides autocomplete-style suggestions as you code based on the context of the file you are working on and related files',
+                preferential:'$350 infree trial credit', 
+            },
+            {
+                image_background:'https://res.cloudinary.com/daily-now/image/upload/f_auto,q_auto/v1/posts/7384b69d19497219ece9fe29b6952457?_a=AQADKdt',
+                image_index1:'https://res.cloudinary.com/daily-now/image/upload/t_logo,f_auto/v1/logos/7580f41794a84265a417ed0987aa6173',
+                name:'5 React Libraries',
+                content:'5 React Libraries to Level Up your Projects in 2023 | Livecycle TL;DR. In this article we’ll look at 5 libraries that can positively impact your React development experience',
+                preferential:'$350 infree trial credit', 
+            },
+            {
+                image_background:'https://res.cloudinary.com/daily-now/image/upload/f_auto,q_auto/v1/posts/92d2cdcc21d485876e7671b772eaa064?_a=AQADKdt',
+                image_index1:'https://res.cloudinary.com/daily-now/image/upload/t_logo,f_auto/v1/logos/81a4f43fc0b84e55b9f61cbae4ec745a',
+                name:'Why We Chose Node.js Over Deno?',
+                content:'Node.js was the de-facto standard for writing server-side JavaScript apps in the 2010s',
+                preferential:'$350 infree trial credit', 
+            },
+            {
+                image_background:'https://res.cloudinary.com/daily-now/image/upload/f_auto,q_auto/v1/posts/44984394177adea062b5d42c8b5726b7?_a=AQADKdt',
+                image_index1:'https://res.cloudinary.com/daily-now/image/upload/t_logo,f_auto/v1/logos/be8d9d38650943c8a1718ba79f23e9ac',
+                name:'Five Alternatives to GitHub Copilot',
+                content:'GitHub Copilot is an AI-powered pair programming tool developed by Microsoft. It provides autocomplete-style suggestions as you code based on the context of the file you are working on and related files',
+                preferential:'$350 infree trial credit', 
+            },
+            {
+                image_background:'https://res.cloudinary.com/daily-now/image/upload/f_auto,q_auto/v1/posts/7384b69d19497219ece9fe29b6952457?_a=AQADKdt',
+                image_index1:'https://res.cloudinary.com/daily-now/image/upload/t_logo,f_auto/v1/logos/7580f41794a84265a417ed0987aa6173',
+                name:'5 React Libraries',
+                content:'5 React Libraries to Level Up your Projects in 2023 | Livecycle TL;DR. In this article we’ll look at 5 libraries that can positively impact your React development experience',
+                preferential:'$350 infree trial credit', 
+            },
+            {
+                image_background:'https://res.cloudinary.com/daily-now/image/upload/f_auto,q_auto/v1/posts/92d2cdcc21d485876e7671b772eaa064?_a=AQADKdt',
+                image_index1:'https://res.cloudinary.com/daily-now/image/upload/t_logo,f_auto/v1/logos/81a4f43fc0b84e55b9f61cbae4ec745a',
+                name:'Why We Chose Node.js Over Deno?',
+                content:'Node.js was the de-facto standard for writing server-side JavaScript apps in the 2010s',
+                preferential:'$350 infree trial credit', 
+            },
+        ];
+        const listHTML = list.map((item)=>{
+            return`
+            <product-item
+            image_background="${item.image_background}"
+            image_index1="${item.image_index1}"
+            name="${item.name}"
+            content="${item.content}"
+            preferential="${item.preferential}"
+            ></product-item>
+            `
+        });
+        const joined = listHTML.join('\n');
+        const mainContainer = document.querySelector('main-container');
+if (mainContainer){
+    mainContainer.innerHTML = joined;
+}
+    </script>
+  </body>
+</html>
