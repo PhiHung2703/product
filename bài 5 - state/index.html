@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Parcel Sandbox</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style></style>
+    <script src="clone-me.js"></script>
+    <script src="CoreElement.js"></script>
+    <script src="clone-me-short.js"></script>
+    <style>
+      body {
+        display: flex;
+        flex-direction: column;
+        padding: 0;
+        margin: 0;
+      }
+    </style>
+  </head>
+
+  <body>
+    <clone-me></clone-me>
+    <script>
+        const list =[
+            {
+                logo:'https://ph-files.imgix.net/dd9e30e9-222a-4b38-9521-9e518007012f.png?auto=compress&codec=mozjpeg&cs=strip&auto=format&w=80&h=80&fit=crop&bg=0fff&dpr=2',
+                rank:'#1',
+                name:'CalcMate: notes calculator',
+                content:'calculate numbers, dates, units within notes',    
+            },
+            {
+                logo:'https://ph-files.imgix.net/235e8409-a35f-45ec-b2dc-645366cab3e2.png?auto=compress&codec=mozjpeg&cs=strip&auto=format&w=80&h=80&fit=crop&bg=0fff&dpr=2',
+                rank:'',
+                name:'ValiAssistant',
+                content:'Let AI assist you in building world changing hardware',    
+            },
+            {
+                logo:'https://ph-files.imgix.net/91808036-f7ea-478c-980e-ab48b8d0f04f.png?auto=compress&codec=mozjpeg&cs=strip&auto=format&w=80&h=80&fit=crop&bg=0fff&dpr=2',
+                rank:'',
+                name:'10x Designers',
+                content:'Expand your skillset',    
+            },
+            {
+                logo:'https://ph-files.imgix.net/1dda3b25-65fc-4f36-80c1-f152f4cbb742.png?auto=compress&codec=mozjpeg&cs=strip&auto=format&w=80&h=80&fit=crop&bg=0fff&dpr=2',
+                rank:'#5',
+                name:'Notion Phone Notebook',
+                content:'Save your contacts in Notion!',    
+            },
+            {
+                logo:'https://ph-files.imgix.net/0e3587a0-a371-4c7a-8b6f-1003a20a39c4.png?auto=compress&codec=mozjpeg&cs=strip&auto=format&w=80&h=80&fit=crop&bg=0fff&dpr=2',
+                rank:'#8',
+                name:'Ween.ai',
+                content:'The AI platform that turns qualitative data into insights',    
+            },
+            {
+                logo:'https://ph-files.imgix.net/8ba5283d-f288-43d6-b3af-a0c71fe5c764.png?auto=compress&codec=mozjpeg&cs=strip&auto=format&w=80&h=80&fit=max&bg=0fff&dpr=2',
+                rank:'',
+                name:'WorkOS',
+                content:'APIs to make your app enterprise ready',    
+            },
+            {
+                logo:'https://ph-files.imgix.net/dd9e30e9-222a-4b38-9521-9e518007012f.png?auto=compress&codec=mozjpeg&cs=strip&auto=format&w=80&h=80&fit=crop&bg=0fff&dpr=2',
+                rank:'#1',
+                name:'CalcMate: notes calculator',
+                content:'calculate numbers, dates, units within notes',    
+            },
+            {
+                logo:'https://ph-files.imgix.net/235e8409-a35f-45ec-b2dc-645366cab3e2.png?auto=compress&codec=mozjpeg&cs=strip&auto=format&w=80&h=80&fit=crop&bg=0fff&dpr=2',
+                rank:'',
+                name:'ValiAssistant',
+                content:'Let AI assist you in building world changing hardware',    
+            },
+            {
+                logo:'https://ph-files.imgix.net/91808036-f7ea-478c-980e-ab48b8d0f04f.png?auto=compress&codec=mozjpeg&cs=strip&auto=format&w=80&h=80&fit=crop&bg=0fff&dpr=2',
+                rank:'',
+                name:'10x Designers',
+                content:'Expand your skillset',    
+            },
+            {
+                logo:'https://ph-files.imgix.net/1dda3b25-65fc-4f36-80c1-f152f4cbb742.png?auto=compress&codec=mozjpeg&cs=strip&auto=format&w=80&h=80&fit=crop&bg=0fff&dpr=2',
+                rank:'#5',
+                name:'Notion Phone Notebook',
+                content:'Save your contacts in Notion!',    
+            },
+            {
+                logo:'https://ph-files.imgix.net/0e3587a0-a371-4c7a-8b6f-1003a20a39c4.png?auto=compress&codec=mozjpeg&cs=strip&auto=format&w=80&h=80&fit=crop&bg=0fff&dpr=2',
+                rank:'#8',
+                name:'Ween.ai',
+                content:'The AI platform that turns qualitative data into insights',    
+            },
+            {
+                logo:'https://ph-files.imgix.net/8ba5283d-f288-43d6-b3af-a0c71fe5c764.png?auto=compress&codec=mozjpeg&cs=strip&auto=format&w=80&h=80&fit=max&bg=0fff&dpr=2',
+                rank:'',
+                name:'WorkOS',
+                content:'APIs to make your app enterprise ready',    
+            },
+        ];
+        const listHTML = list.map((item)=>{
+            return`
+            <clone-me-short
+            logo="${item.logo}"
+            rank="${item.rank}"
+            name="${item.name}"
+            content="${item.content}"
+            ></clone-me-short>
+            `
+        });
+        const joined = listHTML.join('\n');
+        const cloneMe = document.querySelector('clone-me');
+if (cloneMe){
+    cloneMe.innerHTML = joined;
+}
+    </script>
+  </body>
+</html>
