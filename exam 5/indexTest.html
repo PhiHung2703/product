@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+        display: flex;
+        flex-direction: column;
+        padding: 0;
+        margin: 0;
+      }
+      .container{
+      box-sizing: border-box;
+      width:100%;
+      background-color: white;
+      display: flex;
+      flex-direction: column;
+      flex-wrap:wrap;
+      justify-content: center;
+      }
+      .title{
+        display: flex;
+        align-items: center;
+      }
+      .title::before,
+      .title::after {
+        content: '';
+        height: 1px;
+        background-color: #333;
+        flex: 1;
+      }
+      .title::before {
+        margin-right: 1rem;
+      }
+     .title::after {
+        margin-left: 1rem;
+        }
+      .product-items{
+        display:flex;
+        flex-direction:row;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin:0;
+        width:100%;
+        align-self: center;
+        
+      }
+      .product-item{
+        width: calc( 30% - 20px );
+        margin:20px;
+        display:flex;
+        flex-direction: row;
+        align-items: center;
+      }
+      .logo img{
+        width:60px;
+        height:60px;
+      }
+      .content{
+        margin-left: 10px;
+        display:flex;
+        flex-direction: column;
+        justify-content: space-between;
+      }
+      .content-top{
+        display: flex;
+        flex-direction: row;
+      }
+      .content-bottom{
+        margin-top: 20px;
+      }
+      .rank{
+        color:pink;
+      }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h3 class="title">Trending launches</h3>
+        <div class="product-items">
+            <div class="product-item">
+                <div class="logo">
+                    <img src="https://ph-files.imgix.net/dd9e30e9-222a-4b38-9521-9e518007012f.png?auto=compress&codec=mozjpeg&cs=strip&auto=format&w=80&h=80&fit=crop&bg=0fff&dpr=2"/>
+                </div>
+                <div class="content">
+                    <div class="content-top">
+                        <span class="rank">#1</span>
+                        <div class="name"><strong>CalcMate: notes calculator</strong></div>
+                    </div>
+                    <div class="content-bottom">calculate numbers, dates, units within notes</div>
+                </div>
+            </div>
+            <div class="product-item">
+                <div class="logo">
+                    <img src="https://ph-files.imgix.net/dd9e30e9-222a-4b38-9521-9e518007012f.png?auto=compress&codec=mozjpeg&cs=strip&auto=format&w=80&h=80&fit=crop&bg=0fff&dpr=2"/>
+                </div>
+                <div class="content">
+                    <div class="content-top">
+                        <span class="rank">#1</span>
+                        <div class="name">CalcMate: notes calculator</div>
+                    </div>
+                    <div class="content-bottom">calculate numbers, dates, units within notes</div>
+                </div>
+            </div>
+            <div class="product-item">
+                <div class="logo">
+                    <img src="https://ph-files.imgix.net/dd9e30e9-222a-4b38-9521-9e518007012f.png?auto=compress&codec=mozjpeg&cs=strip&auto=format&w=80&h=80&fit=crop&bg=0fff&dpr=2"/>
+                </div>
+                <div class="content">
+                    <div class="content-top">
+                        <span class="rank">#1</span>
+                        <div class="name">CalcMate: notes calculator</div>
+                    </div>
+                    <div class="content-bottom">calculate numbers, dates, units within notes</div>
+                </div>
+            </div>
+            <div class="product-item">
+                <div class="logo">
+                    <img src="https://ph-files.imgix.net/dd9e30e9-222a-4b38-9521-9e518007012f.png?auto=compress&codec=mozjpeg&cs=strip&auto=format&w=80&h=80&fit=crop&bg=0fff&dpr=2"/>
+                </div>
+                <div class="content">
+                    <div class="content-top">
+                        <span class="rank">#1</span>
+                        <div class="name">CalcMate: notes calculator</div>
+                    </div>
+                    <div class="content-bottom">calculate numbers, dates, units within notes</div>
+                </div>
+            </div>
+            <div class="product-item">
+                <div class="logo">
+                    <img src="https://ph-files.imgix.net/dd9e30e9-222a-4b38-9521-9e518007012f.png?auto=compress&codec=mozjpeg&cs=strip&auto=format&w=80&h=80&fit=crop&bg=0fff&dpr=2"/>
+                </div>
+                <div class="content">
+                    <div class="content-top">
+                        <span class="rank">#1</span>
+                        <div class="name">CalcMate: notes calculator</div>
+                    </div>
+                    <div class="content-bottom">calculate numbers, dates, units within notes</div>
+                </div>
+            </div>
+            <div class="product-item">
+                <div class="logo">
+                    <img src="https://ph-files.imgix.net/dd9e30e9-222a-4b38-9521-9e518007012f.png?auto=compress&codec=mozjpeg&cs=strip&auto=format&w=80&h=80&fit=crop&bg=0fff&dpr=2"/>
+                </div>
+                <div class="content">
+                    <div class="content-top">
+                        <span class="rank">#1</span>
+                        <div class="name">CalcMate: notes calculator</div>
+                    </div>
+                    <div class="content-bottom">calculate numbers, dates, units within notes</div>
+                </div>
+            </div>
+            <div class="product-item">
+                <div class="logo">
+                    <img src="https://ph-files.imgix.net/dd9e30e9-222a-4b38-9521-9e518007012f.png?auto=compress&codec=mozjpeg&cs=strip&auto=format&w=80&h=80&fit=crop&bg=0fff&dpr=2"/>
+                </div>
+                <div class="content">
+                    <div class="content-top">
+                        <span class="rank">#1</span>
+                        <div class="name">CalcMate: notes calculator</div>
+                    </div>
+                    <div class="content-bottom">calculate numbers, dates, units within notes</div>
+                </div>
+            </div>
+            <div class="product-item">
+                <div class="logo">
+                    <img src="https://ph-files.imgix.net/dd9e30e9-222a-4b38-9521-9e518007012f.png?auto=compress&codec=mozjpeg&cs=strip&auto=format&w=80&h=80&fit=crop&bg=0fff&dpr=2"/>
+                </div>
+                <div class="content">
+                    <div class="content-top">
+                        <span class="rank">#1</span>
+                        <div class="name">CalcMate: notes calculator</div>
+                    </div>
+                    <div class="content-bottom">calculate numbers, dates, units within notes</div>
+                </div>
+            </div>
+            <div class="product-item">
+                <div class="logo">
+                    <img src="https://ph-files.imgix.net/dd9e30e9-222a-4b38-9521-9e518007012f.png?auto=compress&codec=mozjpeg&cs=strip&auto=format&w=80&h=80&fit=crop&bg=0fff&dpr=2"/>
+                </div>
+                <div class="content">
+                    <div class="content-top">
+                        <span class="rank">#1</span>
+                        <div class="name">CalcMate: notes calculator</div>
+                    </div>
+                    <div class="content-bottom">calculate numbers, dates, units within notes</div>
+                </div>
+            </div>
+            <div class="product-item">
+                <div class="logo">
+                    <img src="https://ph-files.imgix.net/dd9e30e9-222a-4b38-9521-9e518007012f.png?auto=compress&codec=mozjpeg&cs=strip&auto=format&w=80&h=80&fit=crop&bg=0fff&dpr=2"/>
+                </div>
+                <div class="content">
+                    <div class="content-top">
+                        <span class="rank">#1</span>
+                        <div class="name">CalcMate: notes calculator</div>
+                    </div>
+                    <div class="content-bottom">calculate numbers, dates, units within notes</div>
+                </div>
+            </div>
+            <div class="product-item">
+                <div class="logo">
+                    <img src="https://ph-files.imgix.net/dd9e30e9-222a-4b38-9521-9e518007012f.png?auto=compress&codec=mozjpeg&cs=strip&auto=format&w=80&h=80&fit=crop&bg=0fff&dpr=2"/>
+                </div>
+                <div class="content">
+                    <div class="content-top">
+                        <span class="rank">#1</span>
+                        <div class="name">CalcMate: notes calculator</div>
+                    </div>
+                    <div class="content-bottom">calculate numbers, dates, units within notes</div>
+                </div>
+            </div>
+            <div class="product-item">
+                <div class="logo">
+                    <img src="https://ph-files.imgix.net/dd9e30e9-222a-4b38-9521-9e518007012f.png?auto=compress&codec=mozjpeg&cs=strip&auto=format&w=80&h=80&fit=crop&bg=0fff&dpr=2"/>
+                </div>
+                <div class="content">
+                    <div class="content-top">
+                        <span class="rank">#1</span>
+                        <div class="name">CalcMate: notes calculator</div>
+                    </div>
+                    <div class="content-bottom">calculate numbers, dates, units within notes</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
