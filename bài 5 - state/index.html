@@ -5,9 +5,9 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style></style>
-    <script src="clone-me.js"></script>
+    <script src="main-container.js"></script>
     <script src="CoreElement.js"></script>
-    <script src="clone-me-short.js"></script>
+    <script src="product-item.js"></script>
     <style>
       body {
         display: flex;
@@ -19,7 +19,7 @@
   </head>
 
   <body>
-    <clone-me></clone-me>
+    <main-container></main-container>
     <script>
         const list =[
             {
@@ -97,18 +97,18 @@
         ];
         const listHTML = list.map((item)=>{
             return`
-            <clone-me-short
+            <product-item
             logo="${item.logo}"
             rank="${item.rank}"
             name="${item.name}"
             content="${item.content}"
-            ></clone-me-short>
+            ></product-item>
             `
         });
         const joined = listHTML.join('\n');
-        const cloneMe = document.querySelector('clone-me');
-if (cloneMe){
-    cloneMe.innerHTML = joined;
+        const mainContainer = document.querySelector('main-container');
+if (mainContainer){
+    mainContainer.innerHTML = joined;
 }
     </script>
   </body>
