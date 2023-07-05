@@ -51,7 +51,7 @@ customElements.define("main-container", class extends CoreElement {
     this.style.cssText = this.renderContainerCSS();
     const html = `
       ${this.renderStyle()}
-      <h3 class="title">sfsfsdf</h3>
+      <h3 class="title">Trending launches</h3>
       <slot></slot>
     `;
     this.shadow.innerHTML = html;
