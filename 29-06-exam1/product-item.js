@@ -24,23 +24,23 @@ customElements.define("product-item", class extends HTMLElement {
       width:calc( 16% - 5px );
       margin: 5px;
       aspect-ratio: 6 / 5;
-      position: relative;
       `
     }
   
     renderStyle() {
       return `
       <style>
-    }
+    
     .image-item{
         width:100%;
-        aspect-ratio: 2 / 1;
-        
+       position: relative;
+       background-color:white;
     }
     .image{
       width:100%;
       aspect-ratio: 2 / 1;
       object-fit:cover;
+      position: relative;
     }
     .content_item{
         display: flex;
@@ -139,7 +139,7 @@ customElements.define("product-item", class extends HTMLElement {
       background: black;
       position: absolute;
       right: 0;
-      bottom: 8svh;
+      bottom: 0;
       font-size:5px;
       color:white;
     }
@@ -153,9 +153,10 @@ customElements.define("product-item", class extends HTMLElement {
         ${this.renderStyle()}
         <div class="image-item">
             <a id="image" href="">
-                <div class="timeline">${this.attr('timeline')}</div>
+                
                 <img class="image" src="${this.attr('image_item')}"/>
             </a>
+            <div class="timeline">${this.attr('timeline')}</div>
         </div>
         <div class="content_item">
             <a class="logo-channel" href="">
