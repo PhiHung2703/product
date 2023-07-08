@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="CoreElement.js"></script>
+    <script src="main-container.js"></script>
+    <script src="product-item.js"></script>
+
+
+
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing: border-box;
+        }
+        .container{
+            background-image: linear-gradient(180deg,#00e4cb 0 30%, #3683ed 70% 100% );
+	        width: 100vw;
+	        height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .main-container{
+            width:30%;
+            display:flex;
+            flex-direction: column;
+            /* align-items: center; */
+            border: 1px solid black;
+            background-color: white;
+            padding:20px;
+        }
+        .todoAdd{
+            display:flex;
+            width:100%;
+            height:30px;
+            margin:20px 0;
+        }
+        .content{
+            width:85%;
+            height:100%;
+            border:1px solid black;
+            border-radius: 5px;
+            padding-left: 15px;
+        }
+        .todoAdd button{
+            width:60px;
+            height: 100%;
+            background-color: #ea05fa;
+            margin-left: 5px;;
+            color:white;
+            border:none;
+        }
+        .footer{
+            display:flex;
+            align-items: center;
+            justify-content: space-between;
+
+        }
+        .footer button{
+            background-color: #ea05fa;
+            padding:5px 15px;
+            border:none;
+            color:white;
+            
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="main-container">
+        <h1>Todo App</h1>
+        <div class="todoAdd">
+        <input class="content" id="content" type="text" placeholder="Add your new todo">
+        <button id="add"><i class="fas fa-plus"></i></button>
+        </div>
+    <main-container id="container">
+    </main-container>
+    <div class="footer">
+        <span> You have <span id="pendingTasks"></span> pending tasks</span>
+        <button id="removeAll" onclick="deleteAll()">Clear All</button>
+    </div>
+    </div>
+    </div>
+    <script>
+        let list =[
+            {
+                contentTodo:'Lorem ipsum dolor sit amet',
+            },
+            {
+                contentTodo:'Lorem ipsum dolor',
+            },
+            {
+                contentTodo:'Lorem',
+            },
+            {
+                contentTodo:'Lorem ipsum dolor sit',
+            },
+        ];
+        const mainContainer = document.querySelector('main-container');
+        const content = document.querySelector('#content');
+        const add = document.querySelector('#add');
+        const remove = document.querySelector('remove');
+        const removeAll = document.querySelector('#removeAll');
+        const processItem = (item, index)=>{
+            console.log(index);
+            return`
+            <product-item
+            contentTodo="${item.contentTodo}"
+            index="${index}"
+            ></product-item>
+            `;
+        }
+        const listHTML = list.map(processItem);
+        const joined = listHTML.join('\n');
+        if (mainContainer){
+            mainContainer.innerHTML = joined; 
+        }
+        const pendingTasksNumber = document.querySelector('#pendingTasks');
+        pendingTasksNumber.textContent = list.length;
+
+        
+        //add
+        if(add){add.onclick = () => {
+        console.log('Button Add');
+        const contentTodo = content.value;
+        console.log('contentTodo', contentTodo);
+        const todoAdd ={
+            contentTodo : contentTodo,
+        };
+        const listAdd = [];
+        listAdd.push(todoAdd);
+        console.log(listAdd);
+
+        const newList = list.concat(listAdd);
+        console.log(newList);
+        list = newList;
+        const listHTML = list.map(processItem);
+            const joined = listHTML.join('\n');
+            if (mainContainer){
+                mainContainer.innerHTML = joined;
+            }   
+        const pendingTasksNumber = document.querySelector('#pendingTasks');
+        pendingTasksNumber.textContent = list.length;
+            }
+        }
+
+        //remove
+       
+        function deleteTodo (index){
+            console.log(index);
+            const listRemove = [];
+            for (let i=0; i<list.length; i++){
+                if (i === index){
+
+            }else {
+                listRemove.push(list[i]);
+            }
+            console.log(listRemove);
+            }   
+
+            list = listRemove;
+            const listHTML = list.map(processItem);
+            const joined = listHTML.join('\n');
+            if (mainContainer){
+                mainContainer.innerHTML = joined;
+            }
+            const pendingTasksNumber = document.querySelector('#pendingTasks');
+        pendingTasksNumber.textContent = list.length;
+            
+        }
+
+        //delete all
+
+       function deleteAll   (){
+            list =[];
+            const listHTML = list.map(processItem);
+            const joined = listHTML.join('\n');
+            if (mainContainer){
+                mainContainer.innerHTML = joined;
+            }
+            const pendingTasksNumber = document.querySelector('#pendingTasks');
+        pendingTasksNumber.textContent = list.length;
+            
+        }
+
+    
+
+            
+
+
+    </script>
+</body>
+</html>

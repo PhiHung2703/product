@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Document</title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing: border-box;
+        }
+        .container{
+            background-image: linear-gradient(180deg,#00e4cb 0 30%, #3683ed 70% 100% );
+	        width: 100vw;
+	        height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .main-container{
+            width:30%;
+            display:flex;
+            flex-direction: column;
+            /* align-items: center; */
+            border: 1px solid black;
+            background-color: white;
+            padding:20px;
+        }
+        .todoAdd{
+            display:flex;
+            width:100%;
+            height:30px;
+            margin:20px 0;
+        }
+        .content{
+            width:85%;
+            height:100%;
+            border:1px solid black;
+            border-radius: 5px;
+            padding-left: 15px;
+        }
+        .todoAdd button{
+            width:60px;
+            height: 100%;
+            background-color: #ea05fa;
+            margin-left: 5px;;
+            color:white;
+            border:none;
+        }
+        .todoList li{
+            position: relative;
+            width:100%;
+            padding-top: 5px;
+            padding-bottom: 5px;
+            padding-left: 15px;
+            /* padding-right: 0px; */
+            list-style:none;
+            background:grey;
+            /* border-radius: 5px; */
+            margin-bottom: 10px;
+            overflow: hidden;
+        }
+        .todoList li button{
+            position: absolute;
+            right: -50px;
+            top:50%;
+            transform: translate(0% , -50%);
+            color: white;
+            background: red;
+            padding: 10px;  
+            margin-left: 15px;
+            border:none;
+
+        }
+        .todoList li:hover button {
+            right:0;
+        }
+        .footer{
+            display:flex;
+            align-items: center;
+            justify-content: space-between;
+
+        }
+        .footer button{
+            background-color: #ea05fa;
+            padding:5px 15px;
+            border:none;
+            color:white;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+    <div class="main-container">
+    <h1>Todo App</h1>
+    <div class="todoAdd">
+    <input class="content" id="content" type="text" placeholder="Add your new todo">
+    <button id="add"><i class="fas fa-plus"></i></button>
+    </div>
+        <ul class="todoList" id="todoList">
+            <li>
+                Buy a new gaming laptop
+                <button id="remove"><i class="fas fa-trash"></i></button>
+                </li>
+            </li>
+            <li>
+                Buy a new gaming laptop
+                <button id="remove"><i class="fas fa-trash"></i></button>
+            </li>
+            <li>
+                Buy a new gaming laptop
+                <button id="remove"><i class="fas fa-trash"></i></button>
+            </li>
+            <li>
+                Buy a new gaming laptop
+                <button id="remove"><i class="fas fa-trash"></i></button>
+            </li>
+        </ul>
+    <div class="footer">
+        <span> You have <span class="pendingTasks"></span> pending tasks</span>
+        <button id="removeAll">Clear All</button>
+    </div>
+    </div>
+    </div>
+</body>
+<script>
+    const buttonRemove = document.querySelector('#remove');
+    const buttonAdd = document.querySelector('#add');
+    const inputContent = document.querySelector('#content');
+    const todoList = document.querySelector('#todoList');
+    const removeAll = document.querySelector('#removeAll');
+
+    if(buttonAdd){buttonAdd.onclick = () => {
+        console.log('Button Add');
+        const todo = inputContent.value;
+        console.log('todo', todo);
+        
+
+
+    }
+}
+</script>
+</html>
